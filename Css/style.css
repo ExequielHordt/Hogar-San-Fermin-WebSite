@@ -1,0 +1,18 @@
+/* pseudo selectors. They are elements that do not exist in HTML. ROOT stores CSS variables called custom properties.*/
+:root{
+
+}
+
+/* Global */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px;
+}
