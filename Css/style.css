@@ -1,9 +1,14 @@
 /* pseudo selectors. They are elements that do not exist in HTML. ROOT stores CSS variables called custom properties.*/
 :root{
-
+--primary: #EA0000;
+--secondary: #E5E7E9;
+--white: #FFFFFF;
+--black: #000000;
+--dark-grey: #BDC3C7;
+--primary-font:'Montserrat', sans-serif;
+--secondary-font:'Krub', sans-serif;  
 }
 
-/* Global */
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
@@ -13,6 +18,24 @@ html {
     box-sizing: inherit;
   }
 
+  /* Global */
+.header section, nav{
+  background-color: var(--dark-grey);
+}
+
 body{
+    background-color: var(--secondary);
     font-size: 16px;
+}
+
+p, h4{
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+/* Footer */
+.footer{
+  background-color: var(--dark-grey);
 }
