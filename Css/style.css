@@ -1,41 +1,81 @@
 /* pseudo selectors. They are elements that do not exist in HTML. ROOT stores CSS variables called custom properties.*/
-:root{
---primary: #EA0000;
---secondary: #E5E7E9;
---white: #FFFFFF;
---black: #000000;
---dark-grey: #BDC3C7;
---primary-font:'Montserrat', sans-serif;
---secondary-font:'Krub', sans-serif;  
+:root {
+  --primary: #EA0000;
+  --secondary: #E5E7E9;
+  --white: #FFFFFF;
+  --black: #333;
+  --darkGrey: #BDC3C7;
+  --fontTittle: 'Open Sans', sans-serif;
+  --fontText: 'Lato', sans-serif;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  /* Global */
-.header section, nav{
-  background-color: var(--dark-grey);
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-body{
-    background-color: var(--secondary);
-    font-size: 16px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-p, h4{
-  font-family: var(--secondary-font);
-  font-size: 2rem;
+/* Global */
+body {
+  background-color: var(--secondary);
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 3rem;
+  font-family: var(--fontTittle);
+  color: var(--black);
+}
+
+p, ul {
+  font-size: 1.5rem;
+  font-family: var(--fontText);
   font-weight: bold;
+  color: var(--black);
 }
 
+.container{
+  width: 120rem;
+  margin: 0 auto;
+}
+/* Header */
+.header{
+  text-align: center;
+  background-color: var(--darkGrey);
+  padding-top: 0.01rem;
+}
+
+.header__info ul{
+  display: inline;
+}
+
+
+/* Nav */
+.nav-bg{
+  background-color: var(--darkGrey);
+}
+.nav{
+ padding: 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-top: 2rem;
+}
+
+.nav a{
+  font-family: var(--fontText);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /* Footer */
-.footer{
-  background-color: var(--dark-grey);
+footer {
+  text-align: center;
+  background-color: var(--darkGrey);
 }
